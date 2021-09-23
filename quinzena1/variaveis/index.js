@@ -1,10 +1,6 @@
-
 /* Perguntas do primeiro bloco
-
 1 - 10, 5
-
 2 - 10, 10, 10 
-
 3 - let horasDia = prompt("Quantas horas você trabalha por dia?")
 let ganhoDiario = prompt("Quanto você recebe por dia?")
 alert(`Voce recebe ${ganhoDiario/horasDia} por hora`)
@@ -61,7 +57,3 @@ b = c
 
 
 console.log (a, b)
-
-
-
-
