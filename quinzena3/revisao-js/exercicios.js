@@ -7,7 +7,10 @@ function inverteArray(array) {
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
  
+  const numsPares = array.filter(item => item % 2 == 0).map(item => item * item)
+  return numsPares
 }
+
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
