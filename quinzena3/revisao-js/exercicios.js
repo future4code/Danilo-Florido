@@ -25,8 +25,19 @@ for (let i = 0; i<array.length; i++){
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
-
+  let numeroMaior = array[0]
+  
+  
+    for(let i=0 ; i < array.length ; i++){
+    let numeroDaVez = array[i]
+      if (numeroDaVez > numeroMaior){
+        numeroMaior = numeroDaVez
+      }}
+ console.log (numeroMaior)     
+ return numeroMaior    
 }
+
+
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
