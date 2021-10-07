@@ -315,8 +315,25 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 }
 
-// EXERCÍCIO 19A
+// EXERCÍCIO 19A - Não consegui resolver sozinho
 function ordenaPorNome(consultasNome) {
+  let ultimoPaciente = {
+    nome: ""
+  }
+  const novoArray = []
+
+  while (consultasNome.length > 0){
+    for (paciente of consultasNome) {
+      if (paciente.nome > ultimoPaciente.nome){
+        ultimoPaciente = paciente
+      } 
+    }
+    novoArray[consultasNome.length - 1] = ultimoPaciente
+    consultasNome.splice(consultasNome.indexOf(ultimoPaciente), 1)
+    ultimoPaciente = {nome: ""}
+    console.log(consultasNome.length)
+  }
+  return novoArray
 
 }
 
