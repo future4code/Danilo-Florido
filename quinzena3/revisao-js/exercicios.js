@@ -369,5 +369,14 @@ function ordenaPorData(consultasData) {
 
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
+  const resultadoBalanca = contas.map((valor, index, array) => {
+    let gastoTotal = 0
+    for (compras of valor.compras) {
+      gastoTotal += compras
+    }
+    valor.saldoTotal = valor.saldoTotal - gastoTotal
+    return(valor)
+  })
+  return(contas)
 
 }
