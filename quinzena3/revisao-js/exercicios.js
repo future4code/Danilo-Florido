@@ -339,6 +339,31 @@ function ordenaPorNome(consultasNome) {
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
+  for (patient of consultasData) {
+    patient.date = patient.dataDaConsulta.split('/')
+    patient.date = new Date(patient.date[2],patient.date[1], patient.date[0])
+  }
+
+  const appointmentsByDate = []
+
+  for (let i = 0; i < consultasData.length; i++) {
+    let position = 0
+    for (let y = 0; y < consultasData.length; y++){
+      if (consultasData[i].date > consultasData[y].date){
+        position++
+      }
+    }
+    console.log("position", position)
+    console.log(`consultasData[${i}]`, consultasData[i])
+
+    appointmentsByDate[position] = consultasData[i]
+  }
+
+  for (patient of consultasData) {
+    delete patient.date
+  }
+
+  return(appointmentsByDate)
 
 }
 
