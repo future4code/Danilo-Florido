@@ -267,11 +267,16 @@ function maioresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
+  const menorIdade=arrayDePessoas.filter(item=>item.idade<18)
+  return menorIdade
 
 }
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
+  const duasVezes=array.map(item=>item*2)
+return duasVezes
+//Difícilaté
 
 }
 
