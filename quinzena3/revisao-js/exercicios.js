@@ -14,13 +14,13 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-let numerosPares = [];
+let nPares = [];
 for (let i = 0; i<array.length; i++){
   if(array[i] % 2 === 0){
-    numerosPares.push(array[i]);
+    nPares.push(array[i]);
   }
  }
- return numerosPares;
+ return nPares;
 }
 
 // EXERCÍCIO 04
