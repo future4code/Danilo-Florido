@@ -179,20 +179,42 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-  for (let i = 0; i < array.length; i++) { 
-    for (let j = 0; j < (array.length - i - 1); j++) { 
-    for (let j = 0; j < array.length; j++) { 
-             if(array[j] > array[j+1]) {
-                     let tmp = array[j]; 
-          array[j] = array[j+1]; 
-  }        
-}
+  const newArray = []
+  let arrayLeft = array
+  let lowestNumber = Infinity
+  let arrayDiscart = array
+  let arraySize = array.length
 
-return res
-return array
-}
-    }
+  for (let i = 0; i < arraySize; i++){
+    arrayDiscart.filter(item => {
+
+      if (item < lowestNumber) {
+        lowestNumber = item
+      }
+      return(lowestNumber)
+    })
+
+    newArray.push(lowestNumber)
+
+    let indexToSplice = array.indexOf(lowestNumber)
+    arrayLeft.splice(indexToSplice, 1)
+    arrayDiscart = arrayLeft
+
+
+
+    console.log("lowestNumber", lowestNumber)
+    console.log("newArray", newArray) // teste
+    console.log("indexToSplice",indexToSplice)
+    console.log("arrayLeft", arrayLeft)
+    console.log("arrayDiscart", arrayDiscart)
+    console.log(array)
+    console.log(array.length)
+    console.log(i)
+
+    lowestNumber = Infinity
   }
+ return(newArray)
+}
 
 // EXERCÍCIO 12
 function filmeFavorito() {
