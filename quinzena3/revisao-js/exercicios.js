@@ -282,6 +282,8 @@ return duasVezes
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
+  const doisS=array.map(item=>item*2).map(item=>item.toString())
+  return doisS
 
 }
 
