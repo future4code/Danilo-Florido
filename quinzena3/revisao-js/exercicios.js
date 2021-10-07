@@ -84,6 +84,9 @@ function checaTriangulo(a, b, c) {
   // return 'Escaleno'
   // return 'Equilátero'
   // return 'Isósceles'
+  let tipoTriangulo;
+  a == b && b == c ? tipoTriangulo = 'Equilátero' : a == b || a == c || c == b ? tipoTriangulo = 'Isósceles' : tipoTriangulo = 'Escaleno'
+  return tipoTriangulo
 }
 
 // EXERCÍCIO 09
