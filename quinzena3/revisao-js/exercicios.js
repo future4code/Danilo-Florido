@@ -51,6 +51,17 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+  const nPares = []
+  let i = 0 // iniciandoIndice 
+  let par = 0
+   
+   while(i<n){
+      i++
+      pares.push(par)
+      par = par +2
+   }
+   return nPares
+}
 
 }
 
