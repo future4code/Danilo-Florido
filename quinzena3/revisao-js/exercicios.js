@@ -147,12 +147,52 @@ function comparaDoisNumeros(num1, num2) {
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
 
-}
+
+  let highestNumber = -Infinity
+  let lowestNumber = Infinity
+  let secondhighestNumber = -Infinity
+  let secondlowestNumber = Infinity
+
+  array.filter(item => {
+    if (item >= highestNumber){
+      secondhighestNumber = highestNumber
+      highestNumber = item
+    } else if (item < highestNumber && item > secondhighestNumber) {
+      secondhighestNumber = item
+    }
+    return(secondhighestNumber)
+  })
+
+  array.filter(item => {
+    if (item <= lowestNumber){
+      secondlowestNumber = lowestNumber
+      lowestNumber = item
+    } else if (item > lowestNumber && item < secondlowestNumber) {
+      secondlowestNumber = item
+    }
+    return(secondlowestNumber)
+  })
+
+  const newArray = [secondhighestNumber, secondlowestNumber]
+  return(newArray)
+  }
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-
+  for (let i = 0; i < array.length; i++) { 
+    for (let j = 0; j < (array.length - i - 1); j++) { 
+    for (let j = 0; j < array.length; j++) { 
+             if(array[j] > array[j+1]) {
+                     let tmp = array[j]; 
+          array[j] = array[j+1]; 
+  }        
 }
+
+return res
+return array
+}
+    }
+  }
 
 // EXERCÍCIO 12
 function filmeFavorito() {
