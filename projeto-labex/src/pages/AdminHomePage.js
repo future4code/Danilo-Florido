@@ -56,7 +56,7 @@ const logout = () => {
 };
 
 const getTrips = () => {
-    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/trips")
+    axios.get()
     .then((res) =>{
         setTrips(res.data.trips)
     })
