@@ -34,7 +34,7 @@ export default function TripDetailsPage() {
 
     const getTripDetail = () => {
         const token = window.localStorage.getItem("token");
-        axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/trip/${pathParams.id}`,
+        axios.get(``,
             {
                 headers: {
                     auth: token
@@ -54,7 +54,7 @@ export default function TripDetailsPage() {
         const body = {
             "approve": status,
         }
-        axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/trips/${pathParams.id}/candidates/${id}/decide`, body, {
+        axios.put(``, body, {
             headers: {
                 auth: token
             }

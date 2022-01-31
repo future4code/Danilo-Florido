@@ -62,7 +62,7 @@ const createTrip = () => {
     "description": form.description,
     "durationInDays": form.durationInDays
     }
-axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/trips", body, {
+axios.post("", body, {
     headers: {
         auth: token
     }

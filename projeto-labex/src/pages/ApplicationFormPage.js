@@ -61,7 +61,7 @@ export default function ApplicationFormPage() {
             country: form.country,
         }
         console.clear()
-        axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/trips/${form.tripId}/apply`, body)
+        axios.post(``, body)
             .then((res) => {
                 alert("Cadastrado para a viagem, aguarde sua aprovação")
                 console.log(res)
@@ -73,7 +73,7 @@ export default function ApplicationFormPage() {
             })
     }
     const getTrips = () => {
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/trips")
+        axios.get("")
             .then((res) => {
                 setTrips(res.data.trips)
             })

@@ -38,7 +38,7 @@ export default function LoginPage() {
             email: form.email,
             password: form.password
         };
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/guilherme-mota-cruz/login", body)
+        axios.post("", body)
 
             .then((res) => {
                 window.localStorage.setItem("token", res.data.token)
