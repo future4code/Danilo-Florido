@@ -1,0 +1,12 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: NULL\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "NiloFlorido",
+  "license": "DEBF"
+}
