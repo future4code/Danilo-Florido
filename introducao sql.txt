@@ -1,0 +1,90 @@
+##Ex. 1
+
+## a)
+
+Id : Varchar (255)
+name: Varchar (255)
+birth_date: NOT NULL,
+gender: NOT NULL
+
+## b)
+
+- SHOW DATABASES: Mostra os dados do user
+- SHOW TABLES: Mostra as tabelas
+
+## c)
+
+- DESCRIBE Actor: mostra a tabela mas nao seu conteudo
+
+## Exercício 2
+
+## a)
+
+```mysql
+INSERT INTO Actor VALUES
+("001","Tony Ramos",800000,"1948-08-25","male");
+```
+## b)
+Chave primária duplicada, chaves primarias nao podem possuir o mesmo valor, por padrao
+
+## c)
+Numero de colunas diferentes das colunas da tabela
+
+## d)No insert nao foi colocado um valor para o name
+
+## e)
+"birth_date" do tipo Date nao está definido no insert
+
+## Ex. 3
+## a)
+```mysql
+select * from Actor where gender = "female"
+```
+
+#### b)
+
+```mysql
+select salary from Actor where name = "Tony Ramos";
+```
+
+#### c)
+
+- Retornou apenas a coluna gender, sem dados, pois não há gênero com o valor "inválid" na tabela.
+
+#### d)
+
+```mysql
+select id, name, salary from Actor where salary<500000;
+```
+
+#### e)
+
+- O campo "nome" não existe na tabela Actor, o correto seria:
+
+- ```mysql
+  SELECT id, name from Actor WHERE id = "001"
+  ```
+
+## Ex. 4
+SELECT * FROM Actor WHERE (name NOT LIKE "%A%" ) AND salary > 350000
+SELECT * FROM Actor WHERE (name LIKE "%g%" ) OR (name LIKE "%G%");
+SELECT * FROM Actor WHERE (name LIKE "%a%"  OR name LIKE "%A%"
+OR name LIKE "%g%"  OR name LIKE "%G%") AND salary BETWEEN 300000 and 300000
+
+##Ex. 5
+CREATE TABLE Filmes(
+    id INT PRIMARY KEY,
+    titulo VARCHAR (255) NOT NULL,
+    sinopse Text ,
+    date_lancamento DATE NOT NULL,
+    avaliacao FLOAT NOT NULL
+);
+
+INSERT INTO filmes (id, titulo, sinopse, data_lancamento, avaliacao)
+VALUES(
+  004, 
+  "Dona Flor e Seus Dois Maridos",
+  "Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates.",
+  "2017-11-02", 
+  8
+);
