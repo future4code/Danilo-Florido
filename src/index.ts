@@ -83,7 +83,7 @@ app.get("/user/:id", async (req: Request, res: Response) => {
 
 
 
-// Ex. 3 -  EDITAR USUÁRIO
+// Ex. 3 -
 const editeUser = async (id: string, name: string, nickname: string): Promise<any> => {
   await connection("User")
     .update({
